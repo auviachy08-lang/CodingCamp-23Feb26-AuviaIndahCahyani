@@ -1,0 +1,103 @@
+:root {
+    --pink: #f472b6;
+    --dark: #1e293b;
+    --soft-bg: #fdf2f8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
+html { scroll-behavior: smooth; }
+body { background: #fff; color: #334155; }
+
+/* Navigation */
+nav { display: flex; justify-content: space-between; padding: 20px 8%; border-bottom: 1px solid var(--soft-bg); position: sticky; top: 0; background: white; z-index: 10; }
+.logo { color: var(--pink); font-weight: bold; font-size: 1.2rem; }
+.menu a { text-decoration: none; color: inherit; margin-left: 20px; font-size: 0.9rem; }
+
+/* Header */
+header { text-align: center; padding: 40px 8%; background: linear-gradient(to bottom, #fff, var(--soft-bg)); }
+.hero-banner img { width: 100%; border-radius: 15px; margin-top: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+/* Grid Layouts */
+.container { padding: 50px 8%; }
+.profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.card { padding: 30px; border-radius: 15px; border: 1px solid var(--soft-bg); }
+.card.dark { background: var(--dark); color: white; }
+.card h3 { color: var(--pink); }
+
+/* Headquarters */
+.location-wrapper { display: flex; justify-content: center; gap: 30px; margin-top: 20px; }
+.circle { width: 80px; height: 80px; border-radius: 50%; background: var(--soft-bg); border: 2px solid var(--pink); display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 10px; }
+.text-center { text-align: center; }
+
+/* Form & Result Wrapper */
+.main-wrapper { display: flex; gap: 30px; margin-top: 20px; }
+form { flex: 1.2; background: #fff; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.result-box { flex: 0.8; background: var(--dark); color: white; padding: 25px; border-radius: 15px; }
+
+/* Input Styling */
+.input-box { margin-bottom: 15px; }
+.input-box label { display: block; font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
+input, textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+.radio-wrap { display: flex; gap: 15px; padding: 5px 0; }
+button { width: 100%; padding: 12px; background: var(--pink); color: white; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+button:hover { background: #db2777; }
+
+/* Result Box Content */
+#current-time { font-size: 0.75rem; color: var(--pink); border-bottom: 1px solid #444; margin-bottom: 15px; padding-bottom: 5px; }
+.output-content p { margin-bottom: 10px; font-size: 0.9rem; }
+.output-content strong { color: var(--pink); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .profile-grid, .location-wrapper, .main-wrapper { flex-direction: column; }
+    nav { flex-direction: column; text-align: center; gap: 10px; }
+}
+/* Headquarters Styling dengan Efek Timbul */
+.location-wrapper { 
+    display: flex; 
+    justify-content: center; 
+    gap: 30px; 
+    margin-top: 20px; 
+}
+
+.loc-item { 
+    text-align: center; 
+    cursor: pointer; /* Biar kursor berubah jadi tangan */
+}
+
+.circle { 
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    background: #fff; 
+    border: 2px solid var(--pink); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 2.5rem; 
+    margin: 0 auto 10px; 
+    transition: all 0.3s ease; /* Biar transisinya halus */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan awal */
+}
+
+/* Efek saat Kursor Lewat (Hover) */
+.loc-item:hover .circle {
+    transform: translateY(-5px); /* Melayang ke atas sedikit */
+    background: var(--soft-bg);
+    box-shadow: 0 10px 20px rgba(244, 114, 182, 0.3); /* Bayangan pink lembut */
+    color: var(--pink);
+}
+
+/* Efek saat DIPENCET (Active) */
+.loc-item:active .circle {
+    transform: translateY(2px) scale(0.95); /* Efek mendem/timbul terbalik */
+    background: var(--pink);
+    color: white;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan ke dalam (mendem) */
+}
+
+/* Biar tulisannya juga ikutan pink pas di-hover */
+.loc-item:hover p {
+    color: var(--pink);
+    font-weight: bold;
+}

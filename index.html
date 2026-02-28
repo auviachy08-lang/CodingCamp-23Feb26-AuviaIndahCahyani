@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile - Final</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">My Website</div>
+        <div class="menu">
+            <a href="#home">Home</a>
+            <a href="#about">Our Profile</a>
+            <a href="#message">Message Us</a>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="welcome-section">
+            <h1 id="welcome-title">Hi <span id="display-name">Guest</span>, Welcome To Website</h1>
+            <p>Ini adalah website profil perusahaan kami.</p>
+        </div>
+        <div class="hero-banner">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1366&h=578&auto=format&fit=crop" alt="Banner">
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <div class="profile-grid">
+            <div class="card">
+                <h2>About Company</h2>
+                <p>Berawal dari semangat untuk mendigitalisasi setiap ide, kami tumbuh menjadi mitra teknologi yang berfokus pada kualitas dan ketepatan solusi. Kami percaya bahwa teknologi bukan sekadar kode, melainkan jembatan yang menghubungkan visi bisnis Anda dengan realitas masa depan yang lebih cerdas dan efisien.</p>
+            </div>
+            <div class="card dark">
+                <h3>Vision & Mission</h3>
+                <p>Visi kami adalah menjadi katalisator utama dalam transformasi digital di Asia Tenggara melalui inovasi yang berkelanjutan. Untuk mewujudkannya, kami berkomitmen penuh dalam menghadirkan produk digital berstandar global serta memberikan pendampingan strategis yang memastikan setiap langkah teknologi yang diambil klien kami memberikan dampak nyata bagi masyarakat luas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="headquarters" class="container text-center">
+        <h2>Our Headquarters</h2>
+        <div class="location-wrapper">
+            <div class="loc-item"><div class="circle">🏢</div><p>Jakarta</p></div>
+            <div class="loc-item"><div class="circle">🏢</div><p>Bandung</p></div>
+            <div class="loc-item"><div class="circle">🏢</div><p>Surabaya</p></div>
+        </div>
+    </section>
+
+    <section id="message" class="container">
+        <h2>Message Us</h2>
+        <div class="main-wrapper">
+            <form id="message-form">
+                <div class="input-box">
+                    <label>Nama</label>
+                    <input type="text" id="name-input" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" id="email-input" placeholder="email@domain.com" required>
+                </div>
+                <div class="input-box">
+                    <label>No Handphone</label>
+                    <input type="tel" id="phone-input" placeholder="08xxxxxx" required>
+                </div>
+                <div class="input-box">
+                    <label>Tanggal Lahir</label>
+                    <input type="date" id="dob-input" required>
+                </div>
+                <div class="input-box">
+                    <label>Jenis Kelamin</label>
+                    <div class="radio-wrap">
+                        <label><input type="radio" name="gender" value="Laki-Laki" checked> Laki-Laki</label>
+                        <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label>Pesan</label>
+                    <textarea id="msg-input" rows="3" placeholder="Pesan Anda..." required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+
+            <div class="result-box">
+                <div id="current-time">Current time : -</div>
+                <div class="output-content">
+                    <p><strong>Nama:</strong> <span id="res-name">-</span></p>
+                    <p><strong>Email:</strong> <span id="res-email">-</span></p>
+                    <p><strong>Phone:</strong> <span id="res-phone">-</span></p>
+                    <p><strong>Lahir:</strong> <span id="res-dob">-</span></p>
+                    <p><strong>Gender:</strong> <span id="res-gender">-</span></p>
+                    <p><strong>Pesan:</strong> <span id="res-msg">-</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>Created By RevoU &copy; 2026</p></footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
